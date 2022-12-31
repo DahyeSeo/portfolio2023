@@ -288,9 +288,6 @@ $(function(){
 		-------	after-load	-------
 	*/
 	$(document).ready(function(){
-		$(".loading").on("transitionend webkitTransitionEnd oTransitionEnd otransitionend", (e) => {
-			document.body.removeChild(e.currentTarget);
-		})
 		$(".container").css("display", "block");
 		$("body").removeClass("before-load");
 		projectLink();
@@ -310,6 +307,9 @@ $(function(){
 		});
 		$(window).on("orientationchange", () => {
 			window.location.reload();
+		})
+		$(".loading").on("transitionend webkitTransitionEnd oTransitionEnd otransitionend", (e) => {
+			document.body.removeChild(e.currentTarget);
 		})
 	});
 });

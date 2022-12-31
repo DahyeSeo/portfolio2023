@@ -275,6 +275,11 @@ input[type=submit]{
 	#pc_gnb{
 		display:none;
 	}
+	input[type=submit]{
+		line-height: 1;
+		padding: 0;
+		height: 60px;
+	}
 }
 @media only screen and (max-width:720px) {
 	#header{

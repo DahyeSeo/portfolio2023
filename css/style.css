@@ -725,12 +725,12 @@ a.mail.dark svg .st0 {
     max-width: none;
     height: 100%;
   }
-  #project .project-inner .project-section .project-images .project-image-L {
+  #project .project-inner .project-section .project-images a.project-image-L {
     top: 0;
     width: 60%;
     height: 100%;
   }
-  #project .project-inner .project-section .project-images .project-image-S {
+  #project .project-inner .project-section .project-images a.project-image-S {
     display: block;
     bottom: 0;
     width: 40%;

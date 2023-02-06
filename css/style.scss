@@ -753,18 +753,18 @@ a.mail{
 									max-width: none;
 									height: 100%;
 								}
-							}
-							.project-image-L{
-								top: 0;
-								width: 60%;
-								height: 100%;
-							}
-							.project-image-S{
-								display: block;
-								bottom: 0;
-								width: 40%;
-								height: 50%;
-								transform: translateX(100%);
+								&.project-image-L{
+									top: 0;
+									width: 60%;
+									height: 100%;
+								}
+								&.project-image-S{
+									display: block;
+									bottom: 0;
+									width: 40%;
+									height: 50%;
+									transform: translateX(100%);
+								}
 							}
 						}
 					}

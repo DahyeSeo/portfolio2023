@@ -19,26 +19,23 @@ $(function(){
 			from_email : $("input[name = email]").val(),
 			message : $("textarea[name = message]").val()
 		};
-		if($("textarea[name = message]").val() == ""){
-			$("textarea[name = message]").addClass("invalid");
-		}
 		if(exptest.test($("input[name = email]").val()) == false){
 			$("input[name = email]").addClass("invalid");
+		}
+		else{
+			emailjs.send('service_6uxxmlp', 'template_70nxt9u', data)
+			.then(function(response) {
+				alert('email sent successfully');
+				console.log('email sent successfully', response.status, response.text);
+			}, function(error) {
+				alert('Please resend');
+				console.log('FAILED...', error);
+			});		
 		}
 	});
 	$("textarea, input[name = email]").click(function(){
 		$(this).removeClass("invalid");
 	});
-
-	$("input[name=submit]").submit(function(){
-		emailjs.send('service_6uxxmlp', 'template_70nxt9u', data)
-		.then(function(response) {
-			console.log('email sent successfully', response.status, response.text);
-		}, function(error) {
-			console.log('FAILED...', error);
-		});		
-	});
-
 
 	/* 
 		-------	global nav --------
